@@ -5,5 +5,5 @@ class Solution:
 
         for battery in batteryPercentages:
             count += battery > count
-            
+        
         return count
