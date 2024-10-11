@@ -1,33 +1,29 @@
 name: Update README file counts
-
 on:
   push:
     branches:
       - main
-
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+      with:
+        fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-
     # Run the Python script to update the README
     - name: Run script to update README
       run: |
         python update_readme.py
-
     # Commit and push the changes
     - name: Commit and push changes
       run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add README.md
         git commit -m "Update README with solution counts"
-        git push
+        git push https://${{ secrets.PAT }}@github.com/shplok/LeetCode-Solutions.git
