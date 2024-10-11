@@ -16,6 +16,7 @@ def count_files_by_extension(root_dir):
             ext = os.path.splitext(file)[1]
             if ext in LANGUAGES:
                 counts[LANGUAGES[ext][0]] += 1
+    print(f"File counts: {counts}")  # Debug print
     return counts
 
 # Function to update README.md
@@ -32,6 +33,8 @@ def update_readme(counts):
         elif start_line and line.strip() == '':
             end_line = i
             break
+
+    print(f"Start line: {start_line}, End line: {end_line}")  # Debug print
 
     # Build the new table rows
     new_table = []
@@ -52,6 +55,8 @@ def update_readme(counts):
     # Write the updated README
     with open('README.md', 'w') as file:
         file.writelines(readme)
+
+    print("README updated")  # Debug print
 
 # Main logic
 if __name__ == "__main__":
