@@ -1,11 +1,11 @@
 import os
 
-# Define the language extensions and their corresponding names and icons
+# Define the language extensions and their corresponding names and badges
 LANGUAGES = {
     '.py': ('Python', '![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)'),
     '.js': ('JavaScript', '![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)'),
     '.cpp': ('C++', '![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)'),
-    '.java': ('Java', '![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)'),
+    '.java': ('Java', '![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)')
 }
 
 # Function to count files by extension
@@ -23,18 +23,31 @@ def update_readme(counts):
     with open('README.md', 'r') as file:
         readme = file.readlines()
 
-    # Find the line where the table starts and rewrite it
-    table_start = readme.index('| Language      | Solutions |\n') + 2
-    table_end = table_start + len(LANGUAGES)
+    # Find the position of the language table in the README
+    start_line = None
+    end_line = None
+    for i, line in enumerate(readme):
+        if '| Language      | Solutions |' in line:
+            start_line = i + 2  # Start after the header row
+        elif start_line and line.strip() == '':
+            end_line = i
+            break
 
     # Build the new table rows
     new_table = []
-    for ext, (lang_name, badge, icon) in LANGUAGES.items():
+    for ext, (lang_name, badge) in LANGUAGES.items():
         count = counts[lang_name]
         new_table.append(f"| {badge} | {count} |\n")
 
-    # Replace the old table with the new one
-    readme[table_start:table_end] = new_table
+    # Replace or insert the new table
+    if start_line is not None and end_line is not None:
+        readme[start_line:end_line] = new_table
+    else:
+        # If no table is found, add it at the end of the file
+        readme.append('\n## 🧑‍💻 Languages & Stats\n')
+        readme.append('| Language      | Solutions |\n')
+        readme.append('| ------------- | ----------|\n')
+        readme.extend(new_table)
 
     # Write the updated README
     with open('README.md', 'w') as file:
