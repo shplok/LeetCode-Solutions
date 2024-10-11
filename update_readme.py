@@ -31,7 +31,7 @@ def update_readme(counts):
     new_table = []
     for ext, (lang_name, badge, icon) in LANGUAGES.items():
         count = counts[lang_name]
-        new_table.append(f"| {badge} | {count} | {icon} |\n")
+        new_table.append(f"| {badge} | {count} |\n")
 
     # Replace the old table with the new one
     readme[table_start:table_end] = new_table
