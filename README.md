@@ -1,6 +1,6 @@
 # 📚 LeetCode Solutions
 
-Welcome to my **LeetCode Solutions** repository! 🚀 This repo contains my solutions to a variety of LeetCode challenges, organized by problem and language. Each solution is optimized and categorized for easy access.
+Welcome to my **LeetCode Solutions** repository! 🚀 This repo contains my solutions to a variety of LeetCode challenges.
 
 ---
 
