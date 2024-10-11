@@ -2,11 +2,10 @@ import os
 
 # Define the language extensions and their corresponding names and icons
 LANGUAGES = {
-    '.py': ('Python', '![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)', '🐍'),
-    '.js': ('JavaScript', '![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)', '🌐'),
-    '.cpp': ('C++', '![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)', '💻'),
-    '.java': ('Java', '![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)', '☕'),
-    '.rkt': ('Racket', '![Racket](https://img.shields.io/badge/-Racket-9F1D20?style=flat&logo=racket&logoColor=white)', '🎨')
+    '.py': ('Python', '![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)'),
+    '.js': ('JavaScript', '![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)'),
+    '.cpp': ('C++', '![C++](https://img.shields.io/badge/-C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)'),
+    '.java': ('Java', '![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)'),
 }
 
 # Function to count files by extension
