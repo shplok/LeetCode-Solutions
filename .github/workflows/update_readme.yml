@@ -18,14 +18,12 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-
+    # Run the Python script to update the README
     - name: Run script to update README
       run: |
         python update_readme.py
 
+    # Commit and push the changes
     - name: Commit and push changes
       run: |
         git config --local user.email "actions@github.com"
