@@ -10,7 +10,7 @@ LANGUAGES = {
 
 # Function to count files by extension
 def count_files_by_extension(root_dir):
-    counts = {lang: 0 for lang in LANGUAGES}
+    counts = {LANGUAGES[ext][0]: 0 for ext in LANGUAGES}
     for subdir, _, files in os.walk(root_dir):
         for file in files:
             ext = os.path.splitext(file)[1]
