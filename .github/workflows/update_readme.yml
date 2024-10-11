@@ -10,6 +10,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
+        token: ${{ secrets.PAT }}
         fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -26,4 +27,4 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add README.md
         git commit -m "Update README with solution counts"
-        git push https://${{ secrets.PAT }}@github.com/shplok/LeetCode-Solutions.git
+        git push
