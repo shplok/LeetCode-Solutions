@@ -54,5 +54,5 @@ def update_readme(counts, totalCount):
     print("README.md updated")
 
 if __name__ == "__main__":
-    counts = count_files_by_extension('.')
-    update_readme(counts)
+    counts, totalCount = count_files_by_extension('.')
+    update_readme(counts, totalCount)
