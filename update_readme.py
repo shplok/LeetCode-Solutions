@@ -8,15 +8,17 @@ LANGUAGES = {
 }
 
 def count_files_by_extension(root_dir):
+    totalCount = 0
     counts = {LANGUAGES[ext][0]: 0 for ext in LANGUAGES}
     for subdir, _, files in os.walk(root_dir):
         for file in files:
             ext = os.path.splitext(file)[1]
             if ext in LANGUAGES:
                 counts[LANGUAGES[ext][0]] += 1
-    return counts
+                totalCount += 1
+    return counts, totalCount
 
-def update_readme(counts):
+def update_readme(counts, totalCount):
     with open('README.md', 'r') as file:
         readme = file.readlines()
 
@@ -33,6 +35,7 @@ def update_readme(counts):
     for ext, (lang_name, badge) in LANGUAGES.items():
         count = counts[lang_name]
         new_table.append(f"| {badge} | {count} |\n")
+    new_table.append(f"| **Total!** | {totalCount} |\n")
 
     if start_line is not None and end_line is not None:
         if readme[start_line:end_line] == new_table:
