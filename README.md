@@ -9,3 +9,9 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
  - Hüsam: [GitHub](https://github.com/husamahmud) - [LinkedIn](https://www.linkedin.com/in/husamahmud/)
 
  Happy coding! 🚀
+## 🧑‍💻 Languages & Stats
+| Language      | Solutions |
+| ------------- | ----------|
+| ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) | 102 |
+| ![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white) | 6 |
+| **Total!** | 108 |
