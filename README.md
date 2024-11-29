@@ -1,9 +1,9 @@
 ## 🧑‍💻 Languages & Stats
 | Language      | Solutions |
 | ------------- | ----------|
-| ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) | 110 |
+| ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) | 111 |
 | ![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white) | 6 |
-| **Total!** | 116 |
+| **Total!** | 117 |
 
 ## 🧑‍💻 Languages & Stats
 | Language      | Solutions |
