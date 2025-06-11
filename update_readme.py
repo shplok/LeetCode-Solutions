@@ -7,7 +7,7 @@ LANGUAGES = {
     '.java': ('Java', '![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)'),
     '.sql': ('SQL', '![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff)]'),
     '.c': ('C', '![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)]'),
-    '.cpp' ('C++, '![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#)',
+    '.cpp': ('C++, '![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#)',
 }
 
 def count_files_by_extension(root_dir):
