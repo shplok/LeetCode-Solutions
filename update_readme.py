@@ -45,6 +45,7 @@ def update_readme(counts, totalCount):
             sys.exit(0)  # Exit with status 0 if no changes are needed
         readme[start_line:end_line] = new_table
     else:
+        readne.append('\n# This is a Collection of all the LeetCode Problems that I have Solved!\n\n')
         readme.append('\n## 🧑‍💻 Languages & Stats\n')
         readme.append('| Language      | Solutions |\n')
         readme.append('| ------------- | ----------|\n')
