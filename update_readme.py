@@ -39,11 +39,9 @@ def update_readme(counts, totalCount):
         new_table.append(f"| {badge} | {count} |\n")
     new_table.append(f"| **Total!** | {totalCount} |\n")
 
-    
     header = '# This is a Collection of all the LeetCode Problems that I have Solved!\n'
     if header not in readme:
-        readme.insert(0, header + '\n')
-
+        readme.insert(0, header + '\n')
 
     if start_line is not None and end_line is not None:
         if readme[start_line:end_line] == new_table:
