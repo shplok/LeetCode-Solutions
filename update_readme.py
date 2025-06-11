@@ -5,8 +5,8 @@ import sys
 LANGUAGES = {
     '.py': ('Python', '![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)'),
     '.java': ('Java', '![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white)'),
-    '.sql': ('SQL', '![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff)]'),
-    '.c': ('C', '![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)]'),
+    '.sql': ('SQL', '![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff)'),
+    '.c': ('C', '![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)'),
 }
 
 def count_files_by_extension(root_dir):
