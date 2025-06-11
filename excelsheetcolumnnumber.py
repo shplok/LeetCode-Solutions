@@ -9,7 +9,7 @@ class Solution:
         n = len(columnTitle)
         for i in range(n):
             if i != n-1:
-                prod += ((ord(columnTitle[i].lower()) - ord('a')) + 1) * 26
+                prod += ((ord(columnTitle[i].lower()) - ord('a')) + 1) * (26**(n-i-1))
 
             else:
                 prod += ((ord(columnTitle[i].lower()) - ord('a')) + 1)
