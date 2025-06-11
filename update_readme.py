@@ -42,7 +42,7 @@ def update_readme(counts, totalCount):
     
     header = '# This is a Collection of all the LeetCode Problems that I have Solved!\n'
     if header not in readme:
-        readme.insert(0, header + '\n'
+        readme.insert(0, header + '\n')
 
 
     if start_line is not None and end_line is not None:
