@@ -7,7 +7,7 @@
 | ------------- | ----------|
 | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) | 131 |
 | ![Java](https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white) | 6 |
-| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff) | 3 |
+| ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff) | 4 |
 | ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) | 0 |
-| **Total!** | 140 |
+| **Total!** | 141 |
 
