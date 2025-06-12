@@ -1,7 +1,9 @@
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
         res = []
-        
+        if not nums:
+            return res
+            
         start = nums[0]
 
         for i in range(1, len(nums)):   
@@ -17,4 +19,3 @@ class Solution:
         else:
             res.append(f"{start}->{nums[-1]}")
         return res
-      
