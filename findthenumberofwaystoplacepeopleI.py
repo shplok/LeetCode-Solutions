@@ -19,7 +19,6 @@ class Solution:
                 for k in range(n):
                     if k == i or k == j:
                         continue
-
                     pointTmp = points[k]
                     isXContained = (
                         pointTmp[0] >= pointA[0] and pointTmp[0] <= pointB[0]
