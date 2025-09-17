@@ -12,7 +12,6 @@ class Solution:
             
             lft_side, lft_height = recurse(node.left)
             rte_side, rte_height = recurse(node.right)
-            
 
             balanced = (
                         lft_side and
