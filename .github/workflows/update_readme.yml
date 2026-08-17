@@ -3,33 +3,40 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.PAT }}
-        fetch-depth: 0
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    # Run the Python script to update the README
-    - name: Run script to update README
-      run: python update_readme.py
-    # Commit and push the changes if there are any
-    - name: Commit and push changes
-      run: |
-        if [[ -n $(git status -s) ]]; then
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add README.md
-        git commit -m "Update README with solution counts"
-        git pull --rebase origin main
-        git push
-        else
-        echo "No changes to commit"
-        fi
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT || github.token }}
+          fetch-depth: 0
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run script to update README
+        run: python update_readme.py
+
+      - name: Commit and push changes
+        run: |
+          if [[ -n $(git status -s README.md) ]]; then
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add README.md
+            git commit -m "chore: update README with solution counts"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes to commit"
+          fi
